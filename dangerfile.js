@@ -1,4 +1,5 @@
 import { message, danger, warn } from "danger";
+import fs from "fs";
 
 const modifiedMD = danger.git.modified_files.join("- ");
 
@@ -19,6 +20,8 @@ files.forEach((file) => {
     warn("## 🤔 Found a eslint disable!");
   }
 });
+
+danger.github.pr.additions;
 
 // const diffsPromises = files.map((file) => danger.git.JSONDiffForFile(file));
 
