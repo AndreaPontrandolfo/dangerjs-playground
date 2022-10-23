@@ -1,3 +1,3 @@
 /* eslint-disable */
 /* eslint-disable */
-const myapp = "myapp3";
+const myapp3 = "myapp3";
