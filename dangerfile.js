@@ -12,5 +12,5 @@ const files = danger.git.modified_files.filter(
 const diffsPromises = files.map((file) => danger.git.JSONDiffForFile(file));
 
 Promise.all(diffsPromises).then((JSONDiffs) => {
-  warn("## 🤔" + JSONDiffs[0]);
+  warn("## 🤔" + JSON.stringify(JSONDiffs[0]));
 });
