@@ -1,34 +1,22 @@
 import { message, danger, warn } from "danger";
-// const fs = require("fs");
 
-const modifiedMD = danger.git.modified_files.join("- ");
-
-message("Second PR PR! Congrats!");
-message("Changed Files in this PR: \n - " + modifiedMD);
-
-const files = danger.git.modified_files.filter(
+const modifiedFiles = danger.git.modified_files.filter(
   (path) => path.endsWith("js") || path.endsWith("ts")
 );
 
-// files.forEach((file) => {
-//   const fileContents = fs.readFileSync(file).toString();
-//   console.log(
-//     "🚀 ~ file: dangerfile.js ~ line 14 ~ files.forEach ~ content",
-//     fileContents
-//   );
-//   if (fileContents.includes("eslint-disable")) {
-//     warn("## 🤔 Found a eslint disable!");
-//   }
-// });
-
-// console.log(danger.github.pr.additions);
-
-const diffsPromises = files.map((file) => danger.git.diffForFile(file));
-
-Promise.all(diffsPromises).then((JSONDiffs) => {
-  console.log(
-    "🚀 ~ file: dangerfile.js ~ line 29 ~ Promise.all ~ JSONDiffs",
-    JSONDiffs[0]
-  );
-  warn("## 🤔" + JSON.stringify(JSONDiffs[0]));
+const structuredModifiedFiles = modifiedFiles.map((file) => {
+  return {
+    fileName: file,
+    fileDiffPromise: danger.git.diffForFile(file),
+  };
 });
+
+for (const structuredModifiedFile of structuredModifiedFiles) {
+  structuredModifiedFile.fileDiffPromise.then((fileDiff) => {
+    if (fileDiff.added.includes("eslint-disable")) {
+      warn(
+        `### 🤔 An "eslint-disable" was added in file: ${structuredModifiedFile.fileName}`
+      );
+    }
+  });
+}
