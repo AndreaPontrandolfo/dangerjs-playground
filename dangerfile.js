@@ -4,4 +4,6 @@ const modifiedMD = danger.git.modified_files.join("- ");
 
 message("Second PR PR! Congrats!");
 message("Changed Files in this PR: \n - " + modifiedMD);
-warn("## 🤔" + (async () => await danger.git.linesOfCode())());
+danger.git.linesOfCode().then((changedLines) => {
+  warn("## 🤔" + changedLines);
+});
