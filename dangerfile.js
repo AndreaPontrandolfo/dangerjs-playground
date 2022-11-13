@@ -1,3 +1,3 @@
-const eslintDisableWarn = require("danger-plugin-eslint-disable-warn").default;
+import eslintDisableWarn from "danger-plugin-eslint-disable-warn";
 
 eslintDisableWarn();
