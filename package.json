@@ -11,6 +11,6 @@
   "license": "ISC",
   "devDependencies": {
     "danger": "^11.1.4",
-    "danger-plugin-eslint-disable-warn": "^1.1.0"
+    "danger-plugin-eslint-disable-warn": "^1.1.1"
   }
 }
