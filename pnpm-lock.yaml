@@ -2,11 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   danger: ^11.1.4
-  danger-plugin-eslint-disable-warn: ^1.0.0
+  danger-plugin-eslint-disable-warn: ^1.1.2
 
 devDependencies:
   danger: 11.1.4
-  danger-plugin-eslint-disable-warn: 1.0.0
+  danger-plugin-eslint-disable-warn: 1.1.2
 
 packages:
 
@@ -547,67 +547,17 @@ packages:
     dev: true
     optional: true
 
-  /danger-plugin-eslint-disable-warn/1.0.0:
-    resolution: {integrity: sha512-hPyVc61bqWHDeI130s9jEjyCo7zzafKU1F++qvdxNAVYb6ku58cxqyTKsld0TULeL71j/vuXa0E3C92Qpuk0Bw==}
-    engines: {node: '>=4.0.0'}
-    dependencies:
-      danger: 11.2.0
+  /danger-plugin-eslint-disable-warn/1.1.2:
+    resolution: {integrity: sha512-meaWPVLRuCeRvPjFw3NTDIHdfdFI44IpDx1ooKMvNNEelAtfIIQzz6V+opIy3e5LcqBDI/w59pRjdbvYth8MWA==}
+    engines: {node: '>=12.0.0'}
     optionalDependencies:
       esdoc: 0.5.2
     transitivePeerDependencies:
-      - encoding
       - supports-color
     dev: true
 
   /danger/11.1.4:
     resolution: {integrity: sha512-2X6pbtz7r1RyRhpZpYUWA0L+NancQcjZ0krnoYS5lZxRYfZfG51g1zEUork33zwoUcSpL0BnlTlQQqcGvXhj2A==}
-    engines: {node: '>=14.13.1'}
-    hasBin: true
-    dependencies:
-      '@gitbeaker/node': 21.7.0
-      '@octokit/rest': 18.12.0
-      async-retry: 1.2.3
-      chalk: 2.4.2
-      commander: 2.20.3
-      core-js: 3.25.5
-      debug: 4.3.4
-      fast-json-patch: 3.1.1
-      get-stdin: 6.0.0
-      http-proxy-agent: 5.0.0
-      https-proxy-agent: 5.0.1
-      hyperlinker: 1.0.0
-      json5: 2.2.1
-      jsonpointer: 5.0.1
-      jsonwebtoken: 8.5.1
-      lodash.find: 4.6.0
-      lodash.includes: 4.3.0
-      lodash.isobject: 3.0.2
-      lodash.keys: 4.2.0
-      lodash.mapvalues: 4.6.0
-      lodash.memoize: 4.1.2
-      memfs-or-file-map-to-github-branch: 1.2.1
-      micromatch: 4.0.5
-      node-cleanup: 2.1.2
-      node-fetch: 2.6.7
-      override-require: 1.1.1
-      p-limit: 2.3.0
-      parse-diff: 0.7.1
-      parse-git-config: 2.0.3
-      parse-github-url: 1.0.2
-      parse-link-header: 2.0.0
-      pinpoint: 1.1.0
-      prettyjson: 1.2.5
-      readline-sync: 1.4.10
-      regenerator-runtime: 0.13.10
-      require-from-string: 2.0.2
-      supports-hyperlinks: 1.0.1
-    transitivePeerDependencies:
-      - encoding
-      - supports-color
-    dev: true
-
-  /danger/11.2.0:
-    resolution: {integrity: sha512-UMcgmUEQnk9c9ykQhxB8O/KGNGs7Y0mkPFCmg6lvjCSo5PKVyg+7f0mwMSL2gWzBcPf4/V8TpDA6uFJHIcVn4Q==}
     engines: {node: '>=14.13.1'}
     hasBin: true
     dependencies:
