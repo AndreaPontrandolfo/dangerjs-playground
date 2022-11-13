@@ -2,11 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   danger: ^11.1.4
-  danger-plugin-eslint-disable-warn: ^1.1.1
+  danger-plugin-eslint-disable-warn: ^1.1.2
 
 devDependencies:
   danger: 11.1.4
-  danger-plugin-eslint-disable-warn: 1.1.1
+  danger-plugin-eslint-disable-warn: 1.1.2
 
 packages:
 
@@ -547,8 +547,8 @@ packages:
     dev: true
     optional: true
 
-  /danger-plugin-eslint-disable-warn/1.1.1:
-    resolution: {integrity: sha512-Zr33G/GRDMOZTbgYNLF4zHT96aJjjxmnW6ku2122lldR5xh9FDct9VkT4mwr8H8W54pbnRQ3bb2pnb9B6EhkkQ==}
+  /danger-plugin-eslint-disable-warn/1.1.2:
+    resolution: {integrity: sha512-meaWPVLRuCeRvPjFw3NTDIHdfdFI44IpDx1ooKMvNNEelAtfIIQzz6V+opIy3e5LcqBDI/w59pRjdbvYth8MWA==}
     engines: {node: '>=12.0.0'}
     optionalDependencies:
       esdoc: 0.5.2
