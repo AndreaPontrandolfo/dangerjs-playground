@@ -1,3 +1,7 @@
-import eslintDisableWarn from "danger-plugin-eslint-disable-warn";
+const eslintDisableWarn = require("danger-plugin-eslint-disable-warn").default;
+console.log(
+  "🚀 ~ file: dangerfile.js ~ line 3 ~ eslintDisableWarn",
+  eslintDisableWarn
+);
 
 eslintDisableWarn();
